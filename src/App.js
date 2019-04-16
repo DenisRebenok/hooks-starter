@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import useTitleInput from './hooks/useTitleInput';
 import Toggle from './Toggle';
 
 const App = () => {
-  const [name, setName] = useState('');
-
-  useEffect(() => {
-    document.title = name;
-  });
+  const [name, setName] = useTitleInput('');
   return (
     <div className="main-wrapper">
       <h1>Denys Dishes</h1>
