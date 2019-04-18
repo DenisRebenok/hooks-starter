@@ -1,5 +1,6 @@
-import React, { useState, useContext } from 'react';
-import { UserContext } from './App';
+import React, { useState, useContext, createContext } from 'react';
+
+const UserContext = createContext({ user: true });
 
 const Toggle = () => {
   const [isToggled, setToggle] = useState(false);
